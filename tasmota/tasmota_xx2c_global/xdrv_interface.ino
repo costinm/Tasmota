@@ -399,7 +399,7 @@ bool (* const xdrv_func_ptr[])(uint32_t) = {   // Driver Function Pointers
   &Xdrv94,
 #endif
 
-#ifdef XDRV_95
+#if defined(XDRV_95) || defined(ESP8266)
   &Xdrv95,
 #endif
 
@@ -926,6 +926,8 @@ const uint8_t kXdrvList[] = {
 
 #ifdef XDRV_95
   XDRV_95,
+#elif defined(ESP8266)
+  95,
 #endif
 
 #ifdef XDRV_96
